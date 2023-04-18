@@ -1,4 +1,4 @@
-\version "2.22.2"
+\version "2.24.0"
 
 \include "includes/header-paper.ily"
 \include "includes/prelude-op28-no2-parts.ily"
