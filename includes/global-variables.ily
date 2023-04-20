@@ -60,18 +60,17 @@ insideStaff =
   
 transparent = \tweak transparent ##t \etc
 
-fermataOverUnderBarLine = {
-  \once \override Score.RehearsalMark.break-visibility = 
-    #begin-of-line-invisible
-  \mark \markup \small { \musicglyph #"scripts.ufermata" }
-  
-  %% The RehearsalMark in Staff is overriden, while not touching the one
-  %% from Score.
-  \once \override Staff.RehearsalMark.direction = #DOWN
-  \once \override Staff.RehearsalMark.rotation = #'(180 0 0)
+accidentalUnderTurn = \once \override TextScript.script-priority = #-100
+
+fermataOverBarLine = {
+  \override Score.TextMark.self-alignment-X = #CENTER
+  \textEndMark \markup { \musicglyph "scripts.ufermata" }
 }
 
-accidentalUnderTurn = \once \override TextScript.script-priority = #-100
+fermataUnderbarLine = {
+  \tweak direction #DOWN
+  \textEndMark \markup { \musicglyph "scripts.dfermata" }
+}
 
 %%% Markup %%%
 

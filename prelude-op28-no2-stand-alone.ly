@@ -3,13 +3,17 @@
 \include "includes/header-paper.ily"
 \include "includes/prelude-op28-no2-parts.ily"
 
+
+\header {
+  title = "Prelude"
+  opus = "Opus 28"
+  composer = "Frédéric Chopin"
+}
+
 \paper {
   ragged-last-bottom = ##t
-  system-system-spacing =
-    #'((basic-distance . 12) 
-       (minimum-distance . 8)
-       (padding . 4)
-       (stretchability . 60))
+  min-systems-per-page = ##f
+  system-system-spacing.padding = 3
 }
 
 \preludeTwoMusic

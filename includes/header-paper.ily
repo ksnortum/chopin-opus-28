@@ -9,9 +9,11 @@
   maintainerEmail = "knute (at) snortum (dot) net"
   source = "https://s9.imslp.org/files/imglnks/usimg/8/80/IMSLP86359-PMLP02344-chopin-24-prel.pdf and https://s9.imslp.org/files/imglnks/usimg/f/fc/IMSLP79718-PMLP02344-FChopin_Preludes_Op28.pdf"
   copyright = \markup { 
-    "This work is licensed under a" 
-    \with-url #"https://creativecommons.org/licenses/by-sa/4.0/" 
-    "Creative Commons Attribution-ShareAlike 4.0 License" 
+    \center-column {
+      "Copyright © 2023 Knute Snortum. This work is licensed under the" 
+      \with-url #"https://creativecommons.org/licenses/by-sa/4.0/" 
+      "Creative Commons Attribution-ShareAlike 4.0 International License."
+    }
   }
 }
 

@@ -3,12 +3,14 @@
 \include "includes/header-paper.ily"
 \include "includes/prelude-op28-no15-parts.ily"
 
+\header {
+  title = "Prelude"
+  opus = "Opus 28"
+  composer = "Frédéric Chopin"
+}
+
 \paper {
-  system-system-spacing =
-    #'((basic-distance . 12) 
-       (minimum-distance . 8)
-       (padding . 3)
-       (stretchability . 60))
+  min-systems-per-page = ##f
 }
 
 \preludeFifteenMusic

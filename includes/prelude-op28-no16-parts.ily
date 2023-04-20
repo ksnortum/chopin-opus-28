@@ -8,6 +8,7 @@
 %%% Positions and shapes %%%
 
 moveTupletNumberA = \tweak TupletNumber.Y-offset 5.75 \etc
+moveNoteColumnA = \once \override Score.NoteColumn.X-offset = 1
 
 %%% Music %%%
 
@@ -33,7 +34,7 @@ rightHand = \relative {
   \tuplet 3/2 { <ef a ef'>^> <ef a df>^> \tempo 4 = 60 
                 \tag layout { <ef a c>4^>) } 
                 \tag midi   { <ef a c>8^>) r } } |
-  \bar "||" 
+  \bar "||" \fermataOverBarLine
   \tempo "Presto con fuoco" 4 = 138
   f'16\( ef c df  f, a bf c  df ef f g  a bf c df |
   \ottava 1 ef16 f g a  bf c df ef  e f ef df  c bf a bf |
@@ -103,7 +104,8 @@ leftHand = \relative {
   \tuplet 3/2 2 { <f,, f'>4 <c'' f c'> q q q 
                   \tag layout { q } 
                   \tag midi   { q8 r } } |
-  \fermataOverUnderBarLine
+  \fermataUnderbarLine
+  \moveNoteColumnA
   \repeat unfold 3 { bf8( <f' df'>) r f, bf( <f' df'>) r f, | }
   \repeat unfold 2 { bf8( <ef gf ef'>) r bf, bf'( <ef gf ef'>) r bf, | }
   bf'8( <ef gf ef'>) r bf, bf'( <ef gf ef'>) r bf |
@@ -215,8 +217,12 @@ dynamics = {
 
 pedal = {
   s1 |
-  s8.-\tweak X-offset 0.5 \sustainOn s16\sustainOff s4 s8.\sustainOn 
-    s16\sustainOff s4 |
+  % These tweaks may seem strange.  The first X-offset gets the pedal mark away
+  % from the fermata so that the render engine will engrave it close to the
+  % bottom of the staff.  The extra-offset is not seen by the render engine and
+  % moves the fermata back where it was.
+  s8.-\tweak X-offset 1.25 -\tweak extra-offset #'(-1.25 . 0) \sustainOn 
+    s16\sustainOff s4 s8.\sustainOn s16\sustainOff s4 |
   \repeat unfold 6 {
     s8.\sustainOn s16\sustainOff s4 s8.\sustainOn s16\sustainOff s4 |
   }

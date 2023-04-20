@@ -166,10 +166,6 @@ pedal = {
   s2.\sustainOn s8 s\sustainOff |
 }
 
-forceBreaks = {
-  
-}
-
 preludeNineMusic = \score { 
   \keepWithTag #'layout
   \new PianoStaff \with { 
@@ -179,7 +175,6 @@ preludeNineMusic = \score {
     \new Dynamics \dynamics
     \new Staff = "lower" \leftHand
     \new Dynamics \pedal
-    \new Devnull \forceBreaks
   >>
   \layout {}
 }
