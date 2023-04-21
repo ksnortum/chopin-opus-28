@@ -181,6 +181,19 @@ pedal = {
   s2 s\sustainOff |
 }
 
+forceBreaks = {
+  s1\noBreak s1\break\noPageBreak
+  s1\noBreak s1\break\noPageBreak
+  s1\noBreak s1\break\noPageBreak
+  s1\noBreak s1\break\noPageBreak
+  s1\noBreak s1\pageBreak
+  
+  s1\noBreak s1\break\noPageBreak
+  s1\noBreak s1\break\noPageBreak
+  s1\noBreak s1\break\noPageBreak
+  s1\noBreak s1\noBreak s1\break\noPageBreak
+}
+
 preludeTwentyThreeMusic = \score { 
   \keepWithTag #'layout
   \new PianoStaff \with { 
@@ -191,6 +204,7 @@ preludeTwentyThreeMusic = \score {
     \new Dynamics \dynamics
     \new Staff = "lower" \leftHand
     \new Dynamics \pedal
+    \new Devnull \forceBreaks
   >>
   \layout {}
 }

@@ -35,6 +35,7 @@
 \preludeOneMusic
 \pageBreak
 \preludeTwoMusic
+\pageBreak
 \preludeThreeMusic
 \pageBreak
 \preludeFourMusic
@@ -47,11 +48,15 @@
 \preludeEightMusic
 \pageBreak
 \preludeNineMusic
+\pageBreak
 \preludeTenMusic
 \pageBreak
 \preludeElevenMusic
+\pageBreak
 \preludeTwelveMusic
+\pageBreak
 \preludeThirteenMusic
+\pageBreak
 \preludeFourteenMusic
 \pageBreak
 \preludeFifteenMusic
@@ -67,7 +72,9 @@
 \preludeTwentyOneMusic
 \pageBreak
 \preludeTwentyTwoMusic
+\pageBreak
 \preludeTwentyThreeMusic
+\pageBreak
 \preludeTwentyFourMusic
 
 \preludeOneMidi

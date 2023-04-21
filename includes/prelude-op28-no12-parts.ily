@@ -110,7 +110,7 @@ rightHandUpper = \relative {
   b8 a ds, gs gs fss |
   
   \barNumberCheck 73
-  gs4-.) b\rest b\rest | % \pageBreak
+  gs4-.) b\rest b\rest | 
   << { ds,2.->~( | } { s2 s4^\dim | } >>
   ds2 e4 |
   ds2.->~ |
@@ -470,10 +470,22 @@ pedal = {
 }
 
 forceBreaks = {
-  \repeat unfold 9 { s2. * 8 | }
+  \repeat unfold 4 { s2.\noBreak } s2.\break\noPageBreak
+  \repeat unfold 4 { s2.\noBreak } s2.\break\noPageBreak
+  \repeat unfold 4 { s2.\noBreak } s2.\break\noPageBreak
+  \repeat unfold 4 { s2.\noBreak } s2.\break\noPageBreak
+  \repeat unfold 5 { s2.\noBreak } s2.\pageBreak
   
-  \barNumberCheck 73
-  s2.\pageBreak |
+  \repeat unfold 4 { s2.\noBreak } s2.\break\noPageBreak
+  \repeat unfold 4 { s2.\noBreak } s2.\break\noPageBreak
+  \repeat unfold 4 { s2.\noBreak } s2.\break\noPageBreak
+  \repeat unfold 4 { s2.\noBreak } s2.\break\noPageBreak
+  \repeat unfold 4 { s2.\noBreak } s2.\pageBreak
+  
+  \repeat unfold 4 { s2.\noBreak } s2.\break\noPageBreak
+  \repeat unfold 5 { s2.\noBreak } s2.\break\noPageBreak
+  \repeat unfold 5 { s2.\noBreak } s2.\break\noPageBreak
+  \repeat unfold 4 { s2.\noBreak } s2.\break\noPageBreak
 }
 
 preludeTwelveMusic = \score { 

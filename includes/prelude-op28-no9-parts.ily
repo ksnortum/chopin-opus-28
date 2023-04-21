@@ -119,7 +119,7 @@ dynamics = {
   s2. s8..\< s32\! |
   s4 s8 s\< s4 s8..\> s32\! |
   \tag layout {
-    s2.\p s8. \whiteoutCresc s16\startTextSpan |
+    s2.\p s8.\whiteoutCresc s16\startTextSpan |
     s1 | 
     s2. s8.. s32\stopTextSpan |
     s4..\ff\> s16\! s2^\decrescm |
@@ -166,6 +166,13 @@ pedal = {
   s2.\sustainOn s8 s\sustainOff |
 }
 
+forceBreaks = {
+  s1\noBreak s1\noBreak s1\break\noPageBreak % 3
+  s1\noBreak s1\noBreak s1\break\noPageBreak % 6
+  s1\noBreak s1\break\noPageBreak % 9
+  s1\noBreak s1\break\noPageBreak % 11
+}
+
 preludeNineMusic = \score { 
   \keepWithTag #'layout
   \new PianoStaff \with { 
@@ -175,6 +182,7 @@ preludeNineMusic = \score {
     \new Dynamics \dynamics
     \new Staff = "lower" \leftHand
     \new Dynamics \pedal
+    \new Devnull \forceBreaks
   >>
   \layout {}
 }

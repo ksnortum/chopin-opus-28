@@ -137,6 +137,13 @@ dynamics = {
   s1 * 2 |
 }
 
+forceBreaks = {
+  \repeat unfold 3 { s1\noBreak } s1\break\noPageBreak % 4
+  \repeat unfold 4 { s1\noBreak } s1\break\noPageBreak % 9
+  \repeat unfold 3 { s1\noBreak } s1\break\noPageBreak % 13
+  \repeat unfold 4 { s1\noBreak } s1\break\noPageBreak % 18
+}
+
 preludeTwoMusic = \score { 
   \keepWithTag #'layout
   \new PianoStaff \with { 
@@ -146,6 +153,7 @@ preludeTwoMusic = \score {
     \new Staff = "upper" \rightHand
     \new Dynamics \dynamics
     \new Staff = "lower" \leftHand
+    \new Devnull \forceBreaks
   >>
   \layout {}
 }

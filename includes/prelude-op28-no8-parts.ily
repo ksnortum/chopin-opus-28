@@ -394,18 +394,6 @@ pedal = {
   \repeat unfold 6 { s2...\sustainOn s16\sustainOff | }
 }
 
-forceBreaks = {
-  s1\noBreak s1\break % 1 - 2
-  s1\break s1\break % 3 - 4
-  s1\noBreak s1\break % 5 - 6
-  \repeat unfold 12 { s1\break } % 7 - 20
-  s1\noBreak s1\break % 19 - 20
-  s1\break % 21 
-  \repeat unfold 5 { s1\noBreak s1\break } % 22 - 31
-  s1\noBreak s1\noBreak % 32 - 33
-  s1\break % 34
-}
-
 preludeEightMusic = \score { 
   \keepWithTag #'layout
   \new PianoStaff \with { 
@@ -415,7 +403,6 @@ preludeEightMusic = \score {
     \new Dynamics \dynamics
     \new Staff = "lower" \leftHand
     \new Dynamics \pedal
-    \new Devnull \forceBreaks
   >>
   \layout {}
 }
