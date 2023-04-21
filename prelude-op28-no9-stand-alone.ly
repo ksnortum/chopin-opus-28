@@ -10,7 +10,7 @@
 }
 
 \paper {
-  min-systems-per-page = ##f
+  system-system-spacing.padding = 2
 }
 
 \preludeNineMusic

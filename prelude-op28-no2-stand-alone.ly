@@ -10,11 +10,5 @@
   composer = "Frédéric Chopin"
 }
 
-\paper {
-  ragged-last-bottom = ##t
-  min-systems-per-page = ##f
-  system-system-spacing.padding = 3
-}
-
 \preludeTwoMusic
 \preludeTwoMidi

@@ -10,7 +10,7 @@
 }
 
 \paper {
-  system-system-spacing.padding = 3
+  system-system-spacing.padding = 2
 }
 
 \preludeSixMusic

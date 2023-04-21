@@ -9,5 +9,9 @@
   composer = "Frédéric Chopin"
 }
 
+\paper {
+  min-systems-per-page = ##f
+}
+
 \preludeEightMusic
 \preludeEightMidi
