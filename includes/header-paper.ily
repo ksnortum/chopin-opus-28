@@ -65,6 +65,10 @@
     \PianoStaff
     \consists #Span_stem_engraver
   } 
+  \context {
+    \Voice
+    \override Tie.minimum-length = 2 % do I want this?
+  }
 }
 
 \midi {

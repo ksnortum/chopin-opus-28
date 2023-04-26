@@ -223,8 +223,8 @@ rightHandLower = \relative {
   <gs b>4) r r |
   r4 <gs b>8( <fss as> q <as cs> |
   <gs b>4) r r |
-  r4 r ds-^ |
-  gs4-^ r r |
+  r4 r ds-! |
+  gs4-! r r |
 }
 
 rightHand = <<
@@ -260,11 +260,11 @@ leftHand = \relative {
   
   \barNumberCheck 17
   <b, fs'>-. <b fs' b>-. <b g' b>-. |
-  <b fs' b>4 q <b g'> |
+  <b fs' b>4 q <b g' b> |
   <b fs' b>4 <e g b> <b fs' b> |
   <e g b>4 <b fs' b> <e g b> |
   <b fs' b>4-> <b, b'>-. <b'_~ fs'> |
-  <b fs' b>4-> <b, b'>-. <b' fs'>-. |
+  <b fs' b>4 <b, b'>-. <b' fs'>-. |
   <e b'>4-. <e, e'>-. <e' b'>-. |
   <a, e' a>4-> <a, a'>-. <a'~ e'> |
   
@@ -273,7 +273,7 @@ leftHand = \relative {
   <a e' a>4 <a, a'>-. <a' e'> |
   <d a'>4-. <d, d'>-. <d' a'>-. |
   <g, d' g>4-> <g, g'>-. <g' g'>-. |
-  <c g'>4 <c g' c> q |
+  <c g'>4-. <c g' c> q |
   <c g' c>4 <c fs c'> <b fs' b> |
   <e b'>4 <c g' c>4 q |
   <c g' c>4 <c fs~ c'> <b fs' b> |
@@ -308,10 +308,10 @@ leftHand = \relative {
   <gs ds' gs>4-> <fs, fs'>-. <fs' ds'>-. |
   <e' gs>4-> <e,, e'>-. <e'' gs>-. |
   <ds gs b!>4-> <ds,, ds'>-. <ds'' gs b>-. |
-  <cs gs' b>8-> r r4 r |
-  <ds gs b>8-> r r4 r |
-  <cs gs' b>8-> r r4 r |
-  <ds gs b>8-> r r4 r |
+  <cs gs' b>8->_. r r4 r |
+  <ds gs b>8->_. r r4 r |
+  <cs gs' b>8->_. r r4 r |
+  <ds gs b>8->-> r r4 r |
   
   \barNumberCheck 57
   <e gs>8-. r r4 r |
@@ -347,8 +347,8 @@ leftHand = \relative {
   <gs ds'>4) r r |
   <ds ds'~>2.( |
   <gs ds'>4) r r |
-  r4 r <ds, ds'>-^ |
-  <gs gs'>4-^ r r |
+  r4 r <ds, ds'>-! |
+  <gs gs'>4-! r r |
 }
 
 dynamics = {

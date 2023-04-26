@@ -69,7 +69,7 @@ leftHand = \relative {
 
 dynamics = {
   \override DynamicTextSpanner.style = #'none
-  s2\mf\< s\> |
+  s2\p\< s\> |
   s2\< s\> |
   s1\< |
   s1 |
@@ -81,16 +81,16 @@ dynamics = {
   \barNumberCheck 9
   s2\> s\< |
   s2\> s\cresc |
-  s1\ff |
+  s2\ff\< s\> |
   s2\< s\> |
   s1\< |
   s1\< |
-  s1\! |
+  s4\! s2.\dim |
   s2 s\> |
   
   \barNumberCheck 17
   s1 * 2 |
-  s1\! |
+  s1\pp |
 }
 
 preludeFourteenMusic = \score { 

@@ -90,7 +90,7 @@ rightHand = \relative {
   e16\( f bf a  gf f df' c  bf a gf' f  df c bf' a |
   gf16 f df' c  \clef treble bf a gf' f  df c bf' a  gf f df' c |
   bf16 a gf' f  df c bf' a  gf f df' c  bf a gf' f |
-  \ottava 1 df16 c bf' a  gf f df' c f8-^\) \ottava 0 r <ef,,, a f'>4-. |
+  \ottava 1 df16 c bf' a  gf f df' c f8-!\) \ottava 0 r <ef,,, a f'>4-. |
   <bf' bf'>4-. r r2 |
   \bar "|."
 }
@@ -160,7 +160,7 @@ leftHand = \relative {
   e,,16\( f bf a  gf f df' c  bf a gf' f  df c bf' a |
   gf16 f df' c  bf a gf' f  df c bf' a  gf f df' c |
   bf16 a gf' f  \clef treble df c bf' a  gf f df' c  bf a gf' f |
-  df16 c bf' a  gf f df' c f8-^\) r \clef bass <f,,,, f'>4-. |
+  df16 c bf' a  gf f df' c f8-!\) r \clef bass <f,,,, f'>4-. |
   \slashedGrace { bf,8 } <bf' f' df'>4-.-> r r2 |
 }
 

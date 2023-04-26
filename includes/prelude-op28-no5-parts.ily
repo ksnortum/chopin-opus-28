@@ -5,6 +5,13 @@
 
 \include "global-variables.ily"
 
+%%% Positions and shapes %%%
+
+moveAccentA = \offset Y-offset -1 \etc
+moveAccentB = \offset Y-offset -2 \etc
+
+%%% Music %%%
+
 global = {
   \time 3/8
   \key d \major
@@ -65,30 +72,30 @@ rightHandUpper = \relative {
 
 rightHandLower = \relative {
   \voiceTwo
-  s8 s16 b'8 a8*1/2 |
-  s16 bf8 a b8*1/2[ |
-  s16 a8] bf a8*1/2 |
-  s16 b8 a s16 |
+  s8 s16 b'8\moveAccentA ^> a8*1/2 |
+  s16 bf8\moveAccentA ^> a b8*1/2[\moveAccentA ^> |
+  s16 a8] bf\moveAccentA ^> a8*1/2 |
+  s16 b8\moveAccentA ^> a s16 |
   s4. * 4 |
   
   \barNumberCheck 9
   s4. * 8 |
   
   \barNumberCheck 17
-  s8 s16 b8 a8*1/2 |
-  s16 bf8 a b8*1/2[ |
-  s16 a8] bf a8*1/2 |
-  s16 b8 a s16 |
+  s8 s16 b8\moveAccentA ^> a8*1/2 |
+  s16 bf8\moveAccentA ^> a b8*1/2[\moveAccentA ^> |
+  s16 a8] bf\moveAccentA ^> a8*1/2 |
+  s16 b8\moveAccentA ^> a s16 |
   s4. * 4 |
   
   \barNumberCheck 25
   s4. * 8 |
   
   \barNumberCheck 33
-  s8. bf8 a8*1/2 |
-  s16 g8 fs8 bf8*1/2[ |
-  s16 a8] g fs8*1/2 |
-  s16 bf8 a s16 |
+  s8. bf8\moveAccentA ^> a8*1/2 |
+  s16 g8\moveAccentB ^> fs8 bf8*1/2[\moveAccentA ^> |
+  s16 a8] g\moveAccentB ^> fs8*1/2 |
+  s16 bf8\moveAccentA ^> a s16 |
 }
 
 rightHand = <<

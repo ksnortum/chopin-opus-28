@@ -11,6 +11,7 @@
 
 \paper {
   system-system-spacing.padding = 2
+  tagline = ##f
 }
 
 \preludeNineMusic

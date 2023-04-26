@@ -138,12 +138,13 @@ dynamics = {
   s4.\< s8\! s4.\> s16 s\! |
   
   \barNumberCheck 17
-  s2\f s\> |
+  s4.\f\< s8\! s2\> |
   s4. s8\! s2^\dimm |
   s1\p |
-  s2. s4\< |
-  s16 s8.\! s2 s4^\smorz |
-  s1 * 2 |
+  s2. s8.\< s16\! |
+  s1^\smorz\> |
+  s4 s2.\! |
+  s1 |
   s1-\moveDynamicA \pp |
 }
 

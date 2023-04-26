@@ -31,7 +31,7 @@ global = {
 
 rightHandUpper = \relative {
   \voiceOne
-  b'8->( b) b->( b) b->( b) |
+  b'8->( b-.) b->( b-.) b->( b-.) |
   b8 b b b b b |
   b8 b d d d d |
   d8 d d d d d |
@@ -125,8 +125,11 @@ leftHand = \relative {
   b4.\> fs8[ d b]\! |
   g16\< d' g b d4 e8 f\! |
   e4.\> c8[ g c,])\! |
-  c,16(\< g' e' g e'4)\! c,,16(\< g' e' g |
-  e'2)\! r4 |
+  c,16(\< g' e' g e'4)\! 
+    <<
+      { c,,16( g' e' g | e'2) r4 | }
+      \new Voice { s4\< | s16 s8.\! s2 | }
+    >>
   e,4.( fs8 e16 d cs b) |
   e4.-\slurShapeB ( fs8 e16_\sostenutom d cs b |
   
@@ -159,10 +162,12 @@ dynamics = {
   s2. |
   
   \barNumberCheck 17
-  s2. * 8 |
+  s2. * 5 |
+  s2.\pp |
+  s2. * 2 |
   
   \barNumberCheck 25
-  s2 s4\pp |
+  s2 s4\ppp |
   s2. |
 }
 

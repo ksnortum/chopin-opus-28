@@ -11,7 +11,7 @@ moveNoteA = \tweak NoteColumn.force-hshift 0.5 \etc
 moveNoteB = \tweak NoteColumn.force-hshift 0.25 \etc
 moveNoteC = \tweak NoteColumn.force-hshift 2 \etc
 
-beamPositionsA = \tweak positions #'(-10 . -10) \etc
+beamPositionsA = \tweak positions #'(-10.5 . -10.5) \etc
 beamPositionsB = \tweak positions #'(-13 . -13) \etc
 
 tieShapeA = \shape #'((0 . 0.5) (0 . 1) (0 . 1) (0 . 0.5)) \etc
@@ -128,8 +128,8 @@ rightHandUpper = \relative {
   f8. df16 af2 bf4 |
   
   \barNumberCheck 81
-  c4\) r r bf'~ |
-  bf4\( af gf c, |
+  c4\) r r bf'~\( |
+  bf4 af gf c, |
   f4 ef df bf\) |
   <ef, gf>1^( |
   f1*1/2) s8 \once \hideNotes df^( s8. s16 |
@@ -210,7 +210,7 @@ rightHand = <<
   \clef treble
   \global
   \set Score.tempoHideNote = ##t 
-  \tempo "Lento" 4 = 60
+  \tempo "Sostenuto" 4 = 60
   \new Voice \rightHandUpper
   \new Voice \rightHandLower
 >>
@@ -323,14 +323,14 @@ leftHandUpper = \relative {
   gs'4 gs \voiceThree af'8 af af af | 
   \key df \major
   \voiceFour
-  s4 <df f>2 s4 |
+  s4 <df f>2. |
   <ef gf>2. s4 |
   <<
     { \staffUp c2.*1/6 s8 bf'2 s4 | }
     \new Voice { \voiceThree s8 \staffDown af,4 s8 s af4 s8 | }
   >>
   \staffUp c2 s2 |
-  \staffDown s4 <df f>2 s4 |
+  \staffDown s4 <df f>2. |
   
   \barNumberCheck 81
   s1 * 3 |
@@ -351,7 +351,7 @@ leftHandLower = \relative {
   \staffUp af'8\beamPositionsA [ \staffDown af, \staffUp gf' \staffDown af,] 
     \staffUp <df f>\beamPositionsA [ \staffDown af \staffUp <c gf'> 
     \staffDown af] |
-  df,8 af' \transparent <df f> af  af af <df f> af |
+  df,8 af' \transparent <df f> af  af af af af |
   \transparent <ef' gf>8 af, af af  bf af <df f> af |
   \staffUp gf'8\beamPositionsA [ \staffDown af,16 \staffUp \moveNoteA af' 
     \transparent bf8 \staffDown af,] af af \staffUp <df af'> \staffDown af |
@@ -408,14 +408,14 @@ leftHandLower = \relative {
   \barNumberCheck 73
   s1 * 2 |
   gs,,2 af''8 f gf ef |
-  df8 af' \transparent <df f> af  af af <df f> af |
+  df8 af' \transparent <df f> af  af af af af |
   \transparent <ef' gf>8 af, af af  bf af <df f> af |
   \staffUp gf'8\beamPositionsB [ \staffDown af,16 \staffUp \moveNoteA af' 
     \transparent bf8 \staffDown af,] af af \staffUp <df af'> \staffDown af |
   \staffUp af'8\beamPositionsB [ \staffDown af, \staffUp gf' \staffDown af,] 
     \staffUp <df f>\beamPositionsB [ \staffDown af \staffUp <c gf'> 
     \staffDown af] |
-  df,8 af' \transparent <df f> af  af af <df f> af |
+  df,8 af' \transparent <df f> af  af af af af |
   
   \barNumberCheck 81
   <ef' gf>8 af, af af  bf af \oneVoice r4 |
@@ -618,7 +618,28 @@ pedal = {
   s1\sustainOn |
   
   \barNumberCheck 89
-  s2 s\sustainOff |
+  s2. s4\sustainOff |
+}
+
+forceBreaks = {
+  \repeat unfold 3 { s1\noBreak } s1\break\noPageBreak
+  \repeat unfold 5 { s1\noBreak } s1\break\noPageBreak
+  \repeat unfold 5 { s1\noBreak } s1\break\noPageBreak
+  \repeat unfold 5 { s1\noBreak } s1\break\noPageBreak
+  \repeat unfold 4 { s1\noBreak } s1\break\noPageBreak
+  \repeat unfold 5 { s1\noBreak } s1\pageBreak
+  
+  \repeat unfold 5 { s1\noBreak } s1\break\noPageBreak
+  \repeat unfold 5 { s1\noBreak } s1\break\noPageBreak
+  \repeat unfold 5 { s1\noBreak } s1\break\noPageBreak
+  \repeat unfold 4 { s1\noBreak } s1\break\noPageBreak
+  \repeat unfold 4 { s1\noBreak } s1\pageBreak
+  
+  \repeat unfold 4 { s1\noBreak } s1\break\noPageBreak
+  \repeat unfold 4 { s1\noBreak } s1\break\noPageBreak
+  \repeat unfold 4 { s1\noBreak } s1\break\noPageBreak
+  \repeat unfold 4 { s1\noBreak } s1\break\noPageBreak
+  \repeat unfold 8 { s1\noBreak } s1\pageBreak
 }
 
 preludeFifteenMusic = \score { 
@@ -630,6 +651,7 @@ preludeFifteenMusic = \score {
     \new Dynamics \dynamics
     \new Staff = "lower" \leftHand
     \new Dynamics \pedal
+    \new Devnull \forceBreaks
   >>
   \layout {}
 }

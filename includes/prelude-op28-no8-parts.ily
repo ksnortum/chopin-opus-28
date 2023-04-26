@@ -40,7 +40,7 @@ rightHandUpper = \relative {
     \once \normalsize a,32( a' d, f ef c \once \normalsize b b'
       \once \normalsize a, a' cs, e d b \once \normalsize gs gs'
       \once \normalsize fs, fs' as, cs b gs \once \normalsize es es'
-      \once \normalsize d, d' fss, a gs e \once \normalsize cs cs')
+      \once \normalsize d, d' fss, a gs es \once \normalsize cs cs')
     \once \normalsize cs,32( cs' gs b a fs \once \normalsize d d' 
       \once \normalsize cs, cs' gs b a gs \once \normalsize fs fs'
       \once \normalsize fs, fs' as, cs b gs \once \normalsize es es'
@@ -70,7 +70,7 @@ rightHandUpper = \relative {
     \once \normalsize d,32( d' e, g f ef \once \normalsize c c'
       \once \normalsize c, c' e, g f d \once \normalsize bf bf')
       \once \normalsize bf,( bf' cs, ef d c \once \normalsize a a'
-      \once \normalsize a, a' cs, ef d b \once \normalsize g g') |
+      \once \normalsize a, a' cs, ef d bf \once \normalsize g g') |
     \once \normalsize g,32( g' a, c bf af \once \normalsize f f'
       \once \normalsize e, e' a, c bf af \once \normalsize f f'
       \once \normalsize f, f' a, cf bf af \once \normalsize f f'

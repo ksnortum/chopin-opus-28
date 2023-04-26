@@ -9,6 +9,9 @@
 
 hShiftA = \override NoteColumn.force-hshift = 0
 
+slurPositionA = \tweak positions #'(0 . 0) \etc
+slurPositionB = \tweak positions #'(0 . 0) \etc
+
 %%% Music %%%
 
 global = {
@@ -81,8 +84,8 @@ leftHand = \relative {
   \clef bass
   \global
 
-  e,4^\( b e a8.. gs32 |
-  fs2 b,4\) b'8.. b32( |
+  e,4\slurPositionA ^( b e a8.. gs32 |
+  fs2 b,4) b'8.. b32( |
   \tag layout {
     cs,4) a'8.. a32( b,4) \grace { as16[( b] \slashFlag cs8 }
       \afterGrace 7/8 b4\startTrillSpan { as16\stopTrillSpan b } |
@@ -94,8 +97,8 @@ leftHand = \relative {
     cs4 fs8.. fs32( ds8..) css64 ds \repeat unfold 6 { e64 ds } cs64-. ds-.
       e-. fs-. |
   }
-  e4)^\( b g g'8.. f32 |
-  e4 d c\) <c c'>8..^\( <bf bf'>32 |
+  e4)\slurPositionB ^( b g g'8.. f32 |
+  e4 d c) <c c'>8..^\( <bf bf'>32 |
   <a a'>4 <g g'>8.. q32 <f f'>4 <ff ff'>\) |
   <ef ef'>2^( af4) b^( |
   

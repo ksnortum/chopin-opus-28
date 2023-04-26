@@ -26,11 +26,11 @@ rightHandUpper = \relative {
   \partial 4 e'4(
   cs'8. d16 <d, gs b>4 q |
   q2) <d' fs>4( |
-  <bs ds>8. <cs e>16 <cs a'>4 q |
+  <bs ds>8. <cs~ e>16 <cs a'>4 q |
   q2) \voiceOne <e, cs'>4( |
   <cs as'>8. <d b'>16 <fs d'>4 q |
   q2) \oneVoice <d gs>4-\slurShapeA ^( |
-  q8. <cs a'>16 <cs cs'>4 q |
+  q8. <cs~ a'>16 <cs cs'>4 q |
   q2) \voiceOne e4-\slurShapeB ( |
   
   \barNumberCheck 9

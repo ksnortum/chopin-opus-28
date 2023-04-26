@@ -68,7 +68,7 @@ rightHand = \relative {
   <gf bf gf'>2.\) |
   <df' bf' df>2\( <bf gf' bf>4 |
   <gf' bf gf'>2 <df bf' df>4 |
-  \slashedGrace { <cf af' cf>8 } q4 <bf gf' bf>4\) r |
+  \slashedGrace { <df bf' df>8 } <cf af' cf>4 <bf gf' bf>4\) r |
   R2. |
   
   \barNumberCheck 33
@@ -145,7 +145,7 @@ leftHand = \relative {
   bf,,8\noBeam f''( <e g>\< <ef a> <d bf'> <c c'>\! |
   bf8)\noBeam <f' d'>( <e g>\< <ef a> <d bf'> bf\! |
   ef,8)\noBeam g'( <fs a>\< <f b> <ef c'> <d d'>\! |
-  c8)\noBeam <g' ef'>( <fs a>\< <f b> <ef c'> c\! |
+  c8)\noBeam <g' ef'>( <fs a>\< <f b> <ef c'> <c ef'>\! |
   f,8)\noBeam <bf' gf'>( <a f'>\> <af c> <g ef'> <gf bf>\! |
   f,8)\noBeam <gf' ef'>( <f d'>\> <e g> <ef a> f\! |
   bf,8)\noBeam f'( <e g>\< <ef a> <d bf'> <c c'>\! |
@@ -192,7 +192,7 @@ leftHand = \relative {
   \stemUp <gf bf ef>8-> f <gf bf ef>-> f <gf bf ef>-> f |
   
   \barNumberCheck 41
-  \stemNeutral <gf ef'>8 <f d'> <e g> <ef a> <d bf'> <df f> |
+  \stemNeutral <gf a ef'>8 <f d'> <e g> <ef a> <d bf'> <df f> |
   <c af'>8[ <bf gf'>] \clef bass <a c> <af d> <g ef'> <gf bf> |
   <f df'>8 <e c'> <ef g> <d gs> <cs a'> <c ef> |
   <bf gf'>8 <a f'> <af c> <g d'> <gf ef'> f |

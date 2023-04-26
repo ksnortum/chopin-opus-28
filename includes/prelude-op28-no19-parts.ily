@@ -179,7 +179,7 @@ leftHand = \relative {
     a,8 c' gf  b, d' af  cs, e' bf |
     ef,8 gf' c,  f, af' d,  g, bf' e, |
     af,8 af' f  c af' f  af, af' f |
-    \stemUp \clef treble f,8 ef'' af,  ef ef' af,  c, ef' af, |
+    \stemUp \clef treble f,8 ef'' af,  ef ef' af,  af, ef'' af, |
     \clef bass a,,8 \clef treble a'' f  c a' f  f, a' ef |
     \stemDown \clef bass bf, ef' af,  f d' af  bf, bf' af |
     

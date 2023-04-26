@@ -9,18 +9,8 @@
 
 adjustArpeggioA = \tweak Arpeggio.positions #'(-0.5 . 2.5) \etc
 slurShapeA = \shape #'((0 . 1) (0 . 2) (0 . 3) (0 . 3)) \etc
-slurShapeB = \shape #'(
-                        ((0 . 0) (0 . 0) (0 . 0) (0 . 0))
-                        ((0 . 0) (0 . 1) (0 . 2) (0 . 3))
-                      ) \etc
-slurShapeC = \shape #'(
-                        ((0 . 0) (0 . 0) (0 . 0) (0 . 0))
-                        ((0 . 0) (0 . 1) (0 . 2) (0 . 3))
-                      ) \etc
-slurShapeD = \shape #'(
-                        ((0 . 0) (0 . 0) (0 . 0) (0 . 0))
-                        ((0 . 3) (0 . -3) (0 . -4) (0 . 0))
-                      ) \etc
+slurShapeC = \shape #'((0 . 0) (0 . 0) (0 . 1) (0 . 0)) \etc
+slurShapeD = \shape #'((0 . 0) (0 . -1) (0 . -1) (0 . 0)) \etc
 
 %%% Music %%%
 
@@ -40,7 +30,7 @@ rightHand = \relative {
   \slurUp
   e'2..( b8 |
   d1) |
-  d4.-\slurShapeB ( \acciaccatura { fs8 } e8 d4. a8 |
+  d4.( \acciaccatura { fs8 } e8 d4. a8 |
   b4 b8. b16 b2~ |
   b2) r |
   r2 b'4.( fs8 |

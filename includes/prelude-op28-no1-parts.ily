@@ -352,7 +352,7 @@ dynamics = {
   }
   
   \barNumberCheck 9
-  s4\mf |
+  s4\tweak X-offset 0 \mf |
   s4 * 3 |
   s4\cresc |
   s4 * 3 |
@@ -360,7 +360,7 @@ dynamics = {
   \barNumberCheck 17
   s4 * 3 |
   s8 \scaleDurations 2/3 { s8 s16\! } |
-  s4\ff |
+  s4\offset X-offset 0.25 \ff |
   s4\> |
   s4 |
   s8 \scaleDurations 2/3 { s8 s16\! } |

@@ -17,10 +17,16 @@ moveArpeggioD = \tweak positions #'(-3 . 3) \etc
 moveArpeggioE = \tweak positions #'(-3.5 . 2) \etc
 moveArpeggioF = \tweak positions #'(-4 . 2.5) \etc
 
+movePedalA = \tweak Y-offset 2 \etc
+movePedalB = \tweak X-offset 0 \etc
+
+% not needed
 slurShapeA = \shape #'(
                         ((0 . 0) (0 . 0) (0 . 0) (0 . 0))
                         ((0 . 0) (0 . 0) (0 . 0) (0 . 0))
                       ) \etc
+
+slurPositionsA = \tweak positions #'(-1 . -2) \etc
 
 movePocoRit = 
   \tweak outside-staff-priority ##f 
@@ -108,7 +114,7 @@ rightHandLower = \relative {
   s1. |
   cs1. |
   s1. |
-  cs2. es |
+  cs2. es2 s4 |
   s2. e |
   s2. <e as> |
   s1. |
@@ -159,7 +165,7 @@ leftHand = \relative {
   \slurUp
   fs,8( es' gs fs as cs,  fs, es' gs fs as cs, |
   fs,8 es' gs fs as cs,  cs, fss' as gs b cs,) |
-  fs,8-\slurShapeA ( es' gs fs as cs,  fs, es' gs fs as cs, |
+  fs,8( es' gs fs as cs,  fs, es' gs fs as cs, |
   fs,8 es' gs fs as cs,  cs, fss' as gs b cs,) |
   fs,8( es' gs fs as cs,  fs, es' gs fs as cs, |
   ds,8 gss' bs as ds fs,  gs, fss' as gs cs es, |
@@ -195,7 +201,8 @@ leftHand = \relative {
   <ds fs>8 q <b fs'> q <b gs'> <b fs'>  <b gs'> <b fs'> <b gs'> <b fs'>
     <as fs'> <cs fs> |
   <ds fs>8 q <ds as'> q <gs, ds' gs> q  <cs gs'> q q q q q |
-  <cs gs'>8 <fs, cs'> q q q <fs es'>  <fs fs'> es( gs fs as cs, |
+  <cs gs'>8 <fs, cs'> q q q <fs es'>  <fs fs'> es\slurPositionsA ( gs fs as
+    cs, |
   fs,8) es'' gs fs as cs,  fs, \omitAccidental es' gs fs as cs, |
   fs,8 es' gs fs as cs,  fs, \omitAccidental es' gs fs as cs, |
   b8 es gs fs as cs,  b es gs fs b b, |
@@ -281,8 +288,9 @@ pedal = {
   
   \barNumberCheck 25
   s1. * 2 |
-  s2. s2 s4\sustainOn |
-  s8 s\sustainOff s\sustainOn s\sustainOff s\sustainOn s\sustainOff s2. |
+  s2. s2 s4\movePedalA\sustainOn |
+  s8 s\movePedalA\sustainOff s\sustainOn s\movePedalB\sustainOff 
+    s\movePedalA\sustainOn s\movePedalB\movePedalA\sustainOff s2. |
   s2.\sustainOn s\sustainOff |
   s1. * 2 |
   s4.\sustainOn s\sustainOff s2. |
@@ -299,7 +307,7 @@ pedal = {
 forceBreaks = {
   \repeat unfold 3 { s1.\noBreak } s1.\break\noPageBreak
   \repeat unfold 3 { s1.\noBreak } s1.\break\noPageBreak
-  \repeat unfold 3 { s1.\noBreak } s1.\break\noPageBreak
+  \grace { s8 } \repeat unfold 3 { s1.\noBreak } s1.\break\noPageBreak
   \repeat unfold 3 { s1.\noBreak } s1.\break\noPageBreak
   \repeat unfold 3 { s1.\noBreak } s1.\pageBreak
   

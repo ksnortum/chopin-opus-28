@@ -178,6 +178,7 @@ forceBreaks = {
   \repeat unfold 4 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 4 { s2.\noBreak } s2.\break\noPageBreak
   \repeat unfold 4 { s2.\noBreak } s2.\break\noPageBreak
+  \grace { s8 }
 }
 
 preludeElevenMusic = \score { 

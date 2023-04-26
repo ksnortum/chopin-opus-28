@@ -32,8 +32,8 @@ smorzando = \override TextSpanner.bound-details.left.text =
   \markup \large \italic "smorzando"
 perden = \makeSpanner \markup \large \italic "perdendosi"
 ritSpan = \makeSpanner \markup \large \italic "rit."
-diminESmorz = \makeSpanner \markup \large \italic \whiteout \pad-markup #0.5
-  "dimin. e smorz."
+smorzSpanner = \makeSpanner \markup \large \italic \whiteout \pad-markup #0.5
+  "smorz."
 
 dynamicInsideSlur = {
   \once \override DynamicLineSpanner.avoid-slur = #'inside
@@ -79,6 +79,7 @@ stretto = \markup \large \italic "stretto"
 slentando = \markup \large \italic "slentando"
 sostenutom = \markup \large \italic \whiteout \pad-markup #0.5 "sostenuto"
 leggiermente = \markup \large \italic "leggiermente"
+leggiero = \markup \large \italic "leggiero"
 dimm = \markup \large \italic "dim."
 espressivom = \markup \large \italic \whiteout \pad-markup #0.5 "espressivo"
 smorz = \markup \large \italic \whiteout \pad-markup #0.5 "smorz."

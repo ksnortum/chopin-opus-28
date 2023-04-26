@@ -138,6 +138,7 @@ leftHand = \relative {
 
 dynamics = {
   \override TextScript.Y-offset = -0.5
+  \override TextSpanner.Y-offset = -0.25
   
   \tag layout { s1^\pDelicatiss | }
   \tag midi   { s1\p | }
@@ -149,8 +150,8 @@ dynamics = {
   \barNumberCheck 17
   s1\pp |
   s1 |
-  s2.\p \diminESmorz s4\startTextSpan |
-  s1 |
+  s2.\p s4^\dimm |
+  \smorzSpanner s1\startTextSpan |
   s2... s16\stopTextSpan |
   s1 |
 }

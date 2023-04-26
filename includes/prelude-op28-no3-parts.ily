@@ -59,7 +59,7 @@ rightHandUpper = \relative {
   <d g>1)-\adjustArpeggioD \arpeggio |
   \oneVoice
   R1 |
-  b16( d g a  b a g e'  d c b a  g a b d,) |
+  b16(^\leggiero d g a  b a g e'  d c b a  g a b d,) |
   b16( d g a  b a g e'  d c b a  g a b d,) |
   \slurUp
   b16( d g a  g a b d,)  b( d g a  g a b d,) |
@@ -119,12 +119,12 @@ leftHand = \relative {
   g,16(_\p d' g a  b a g e'  d c b a  g a b d,) |
   \repeat unfold 5 { g,16( d' g a  b a g e'  d c b a  g a b d,) | }
   a16( e' a b  cs b a fs'  e d cs b  a b cs e,) |
-  d,16( a' d e  fs e d b'  a g f e  d e fs b,) |
+  d,16( a' d e  fs e d b'  a g fs e  d e fs b,) |
   
   \barNumberCheck 9
   a16( e' a b  cs b a fs'  e d cs b  a b cs e,) |
-  d,16( a' d e  fs e d b'  a g fs e  d e fs b,) |
-  d,16( a' d e  fs e d b'  a g fs e  d e fs b,) |
+  d,16( a' d e  fs e d b'  a g fs e  d e fs a,) |
+  d,16( a' d e  fs e d b'  a g fs e  d e fs a,) |
   \repeat unfold 5 { g16( d' g a  b a g e'  d c b a  g a b d,) | }
   
   \barNumberCheck 17
@@ -161,11 +161,13 @@ dynamics = {
   s1 * 5 |
   s2...\> s16\! |
   s1 |
-  \tag layout { s1 | }
-  \tag midi   { s1\p | }
+  \tag layout { s1\< | }
+  \tag midi   { s1\p\< | }
   
   \barNumberCheck 17
-  s1 * 8 |
+  s2... s16\! |
+  s2...\> s16\! |
+  s1 * 6 |
   
   \barNumberCheck 25
   s1 * 3 |

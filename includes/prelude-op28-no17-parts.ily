@@ -185,7 +185,7 @@ rightHandLower = \relative {
   r8 <e b'> q q q q |
   r8 <e c'> <ds c'> <fs c'> <e c'> q |
   r8 <e b'> q q q q |
-  <e b'>8 q q <ds b'> q q |
+  <e b'>8 \omitAccidental q q <ds b'> q q |
   
   \barNumberCheck 33
   <ef cf'>8 q q q q q |
