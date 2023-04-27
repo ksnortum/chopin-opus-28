@@ -55,7 +55,6 @@
   \markuplist \table-of-contents
 }
 
-% \concat { "Etude No. 1 in A" \raise #0.75 \teeny \flat " major" }
 \tocItem \markup { "Prelude No. 1 in C major" }
 \preludeOneMusic
 \pageBreak

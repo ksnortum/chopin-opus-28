@@ -394,6 +394,19 @@ pedal = {
   \repeat unfold 6 { s2...\sustainOn s16\sustainOff | }
 }
 
+forceBreaks = {
+  s1\break
+  s1\noBreak s1\break
+  s1\noBreak s1\break 
+  
+  s1\noBreak s1\break
+  s1\break
+  s1\break
+  s1\break
+  s1\noBreak s1\break
+}
+
+% Note: this variable is not used in the stand-alone file
 preludeEightMusic = \score { 
   \keepWithTag #'layout
   \new PianoStaff \with { 
@@ -403,6 +416,7 @@ preludeEightMusic = \score {
     \new Dynamics \dynamics
     \new Staff = "lower" \leftHand
     \new Dynamics \pedal
+    \new Devnull \forceBreaks
   >>
   \layout {}
 }

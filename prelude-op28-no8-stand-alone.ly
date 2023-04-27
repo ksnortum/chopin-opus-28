@@ -13,5 +13,17 @@
   min-systems-per-page = ##f
 }
 
-\preludeEightMusic
+% Full score here instead of variable because we don't want forced breaks
+\score { 
+  \keepWithTag #'layout
+  \new PianoStaff \with { 
+    instrumentName = \markup \huge "No. 8"
+  } <<
+    \new Staff = "upper" \rightHand
+    \new Dynamics \dynamics
+    \new Staff = "lower" \leftHand
+    \new Dynamics \pedal
+  >>
+  \layout {}
+}
 \preludeEightMidi
