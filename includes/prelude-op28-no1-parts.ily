@@ -140,11 +140,12 @@ rightHandUpper = \relative {
   \tag #'midi {
     s8 c->~ |
     c8 c->~ |
-    c8 c->~ |
-    c8 c-> |
+    c8 \tempo 8 = 110 c->~ |
+    c8 \tempo 8 = 100 c-> |
   }
   
   \barNumberCheck 33
+  \tempo 8 = 90
   s8 \scaleDurations 2/3 { s8 \clearStem c,16_~ | }
   <c e>4\fermata |
   \bar "|."
