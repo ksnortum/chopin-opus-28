@@ -381,31 +381,30 @@ dynamics = {
 
 pedal = {
   \scaleDurations 2/3 {
-    \repeat unfold 3 { s8.\sustainOn s16 s\sustainOff s } |
-    s8.\sustainOn s16 s\sustainOff s |
-    s8.\sustainOn s16 s\sustainOff s |
-    s8.\sustainOn s16 s\sustainOff s |
-    s8.\sustainOn s16 s\sustainOff s |
-    s8.\sustainOn s16 s\sustainOff s |
+    \repeat unfold 3 { s8.\sd s8 s16\su | }
+    s8.\sd s8 \override SustainPedal.Y-offset = 1.5 s16\su |
+    \repeat unfold 2 { s8.\sd s8 s16\su | }
+    \override SustainPedal.Y-offset = 2.5
+    s8.\sd s8 s16\su |
+    \revert SustainPedal.Y-offset
+    s8.\sd s8 \override SustainPedal.Y-offset = 1 s16\su |
     
     \barNumberCheck 9
-    s8.\sustainOn s16 s\sustainOff s |
-    s8.\sustainOn s16 s\sustainOff s |
-    s8.\sustainOn s16 s\sustainOff s |
-    s8.\sustainOn s16 s\sustainOff s |
-    \repeat unfold 4 { s8.\sustainOn s16 s\sustainOff s } |
+    \repeat unfold 3 { s8.\sd s8 s16\su | }
+    s8.\sustainOn s8 \override SustainPedal.Y-offset = 2 s16\sustainOff |
+    s8.\sd s8 s16\su |
+    \revert SustainPedal.Y-offset
+    \repeat unfold 2 { s8.\sd s8 s16\su | }
+    s8.\sd s8 \override SustainPedal.Y-offset = 1 s16\su |
     
     \barNumberCheck 17
-    \repeat unfold 2 { s8.\sustainOn s16 s\sustainOff s } |
-    s8.\sustainOn s16 s\sustainOff s |
-    s8.\sustainOn s16 s\sustainOff s |
-    s8.\sustainOn s16 s\sustainOff s |
-    \repeat unfold 3 { s8.\sustainOn s16 s\sustainOff s } |
+    \repeat unfold 4 { s8.\sd s8 s16\su | }
+    \override SustainPedal.Y-offset = 3
+    \repeat unfold 4 { s8.\sd s8 s16\su | }
     
     \barNumberCheck 25
-    s8.\sustainOn s16 s\sustainOff s |
-    \repeat unfold 2 { s8.\sustainOn s16 s\sustainOff s } |
-    \repeat unfold 5 { s8.\sustainOn s16 s\sustainOff s } |
+    \revert SustainPedal.Y-offset
+    \repeat unfold 8 { s8.\sd s8 s16\su | } |
   }
 }
 

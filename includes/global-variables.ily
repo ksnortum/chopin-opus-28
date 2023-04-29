@@ -18,6 +18,8 @@ staffUp   = \change Staff = "upper"
 staffDown = \change Staff = "lower"
 up   = { \staffUp \stemDown }
 down = { \staffDown \stemUp }
+sd = \sustainOn
+su = \sustainOff
 
 voiceFive = #(context-spec-music (make-voice-props-set 4) 'Voice)
 
