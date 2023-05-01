@@ -106,20 +106,24 @@ dynamics = {
 
 pedal = {
   \partial 4 s4
+  \override SustainPedal.Y-offset = 2
   s2.\sustainOn |
   s4 s\sustainOff s |
   s2.\sustainOn |
   s4 s\sustainOff s |
   s2.\sustainOn |
   s4 s\sustainOff s |
+  \revert SustainPedal.Y-offset
   s2.\sustainOn |
   s4 s\sustainOff s |
   
   \barNumberCheck 9
+  \override SustainPedal.Y-offset = 2
   s2.\sustainOn |
   s4 s\sustainOff s |
   s2\sustainOn s4\sustainOff |
   s2\sustainOn s4\sustainOff |
+  \revert SustainPedal.Y-offset
   s2\sustainOn s4\sustainOff |
   s2\sustainOn s4\sustainOff |
   s2.\sustainOn |

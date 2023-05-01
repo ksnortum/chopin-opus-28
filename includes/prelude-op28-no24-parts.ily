@@ -381,14 +381,15 @@ pedal = {
   \barNumberCheck 9
   s2. |
   s4 s8\sustainOff s4\sustainOn s8\sustainOff |
-  \repeat unfold 3 { s2\sustainOn s8. s16\sustainOff | }
-  s2\sustainOn s8.. s32\sustainOff |
-  s2\sustainOn s8. s16\sustainOff |
-  s2\sustainOn s8. s16\sustainOff |
+  \repeat unfold 2 { s2\sustainOn s8. s16\sustainOff | }
+  s2.\sustainOn |
+  s2.\sustainOff\sustainOn |
+  s2.\sustainOff\sustainOn |
+  s2\sustainOff\sustainOn s8. s16\sustainOff |
   
   \barNumberCheck 17
-  s2\sustainOn s8.. s32\sustainOff |
-  s2\sustainOn s8.. s32\sustainOff |
+  s2\sustainOn s8... s64\sustainOff |
+  s2\sustainOn s8... s64\sustainOff |
   s2.\sustainOn |
   s2. * 2 |
   s2 s8. s16\sustainOff |
@@ -434,16 +435,17 @@ pedal = {
   s2.\sustainOn |
   s2. * 2 |
   s2 s8. s32 s\sustainOff |
-  s2\sustainOn s8. s16\sustainOff |
-  \repeat unfold 3 { s4.\sustainOn s4\sustainOff\sustainOn s16 s\sustainOff | }
+  s2.\sustainOn |
+  s4.\sustainOff\sustainOn s4\sustainOff\sustainOn s16 s\sustainOff |
+  \repeat unfold 2 { s4.\sustainOn s4.\sustainOff\sustainOn | }
   
   \barNumberCheck 65
-  s2\sustainOn s8. s16\sustainOff |
+  s2\sustainOff\sustainOn s8. s16\sustainOff |
   s2\sustainOn s8.. s32\sustainOff |
   s2\sustainOn s8. s16\sustainOff |
-  s4.\sustainOn s4\sustainOff\sustainOn s16 s\sustainOff |
-  s2\sustainOn s8. s16\sustainOff |
-  s2\sustainOn s8.. s32\sustainOff |
+  s4.\sustainOn s4.\sustainOff\sustainOn |
+  s2.\sustainOff\sustainOn |
+  s2\sustainOff\sustainOn s8.. s32\sustainOff |
   s2\sustainOn s8. s16\sustainOff |
   s4.\sustainOn s4\sustainOff\sustainOn s16 s\sustainOff |
   

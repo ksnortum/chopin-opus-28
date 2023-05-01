@@ -7,9 +7,10 @@
 
 %%% Positions and shapes %%%
 
-slurPositionsA = \tweak positions #'(4 . 4) \etc
-slurPositionsB = \tweak positions #'(5 . 5) \etc
-slurPositionsC = \tweak positions #'(4 . 3) \etc
+slurShapeA = \shape #'((0 . 1.5) (0 . 2.5) (0 . 0) (0 . 0)) \etc
+slurShapeB = \shape #'((0 . 0.5) (0 . 1.5) (0 . 0) (0 . 0)) \etc
+slurShapeC = \shape #'((0 . 3) (0 . 4) (0 . 0) (0 . 0)) \etc
+slurShapeD = \shape #'((0 . 3) (0 . 4) (0 . 0) (0 . 0)) \etc
 
 moveTrillA = \tweak Y-offset 5 \etc
 
@@ -65,7 +66,7 @@ leftHand = \relative {
   <f, c' a'>2\arpeggio r |
   <<
     { 
-      c4 \grace { b'16-\slurPositionsA([ c] } \trillInsideSlur 
+      c4 \grace { b'16-\slurShapeA([ c] } \trillInsideSlur 
         c4*3/4\startTrillSpan s16\stopTrillSpan a'4 g) 
     }
     \\
@@ -78,7 +79,7 @@ leftHand = \relative {
   <c,, g' e'>2\arpeggio r |
   <<
     { 
-      g4 \grace { fs'16-\slurPositionsB([ g] } \trillInsideSlur 
+      g4 \grace { fs'16-\slurShapeB([ g] } \trillInsideSlur 
         g4*3/4-\moveTrillA\startTrillSpan s16\stopTrillSpan e'4 d) 
     }
     \\
@@ -94,7 +95,7 @@ leftHand = \relative {
   \clef bass <f, c' a'>2\arpeggio r |
   <<
     { 
-      c4 \clef treble \grace { b'16-\slurPositionsC([ c] } \trillInsideSlur
+      c4 \clef treble \grace { b'16-\slurShapeC([ c] } \trillInsideSlur
         c4*3/4\startTrillSpan s16\stopTrillSpan a'4 g) 
     }
     \\
@@ -121,7 +122,7 @@ leftHand = \relative {
   \clef bass <f,, c' a'>2\arpeggio r |
   <<
     { 
-      c4 \clef treble \grace { b'16-\slurPositionsC([ c] } \trillInsideSlur
+      c4 \clef treble \grace { b'16-\slurShapeD([ c] } \trillInsideSlur
         c4*3/4\startTrillSpan s16\stopTrillSpan a'4 g) 
     }
     \\

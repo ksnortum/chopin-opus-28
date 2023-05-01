@@ -525,18 +525,18 @@ pedal = {
     s16\sustainOff |
   s2.\sustainOn s8 s\sustainOff |
   s4.\sustainOn s8\sustainOff s4 s\sustainOn |
-  s8.\sustainOff\sustainOn s16\sustainOff s2\sustainOn 
-    s4\sustainOff\sustainOn |
-  s4.\sustainOff\sustainOn s8\sustainOff s4\sustainOn s\sustainOff |
+  s4\sustainOff\sustainOn s2\sustainOff\sustainOn s4\sustainOff\sustainOn |
+  s4.\sustainOff\sustainOn s8\sustainOff\sustainOn s4 s\sustainOff |
     
   \barNumberCheck 9
-  s4.\sustainOn s8\sustainOff s4\sustainOn s8\sustainOff\sustainOn
-    s16 s\sustainOff |
-  s4.\sustainOn s8\sustainOff s4.\sustainOn s8\sustainOff |
-  s4.\sustainOn s8\sustainOff s4.\sustainOn s8\sustainOff |
+  s4.\sustainOn s8\sustainOff s4\sustainOn s8\sustainOff\sustainOn s8 |
+  s2\sustainOff\sustainOn s4.\sustainOff\sustainOn s8\sustainOff |
+  \override SustainPedal.Y-offset = 1.5
+  s2\sustainOn s4.\sustainOff\sustainOn s8\sustainOff |
   s4.\sustainOn s8\sustainOff s2 |
   s2\sustainOn s8 s\sustainOff s4 |
-  s4.\sustainOn s8\sustainOff s4.\sustainOn s8\sustainOff |
+  s2\sustainOn s4.\sustainOff\sustainOn s8\sustainOff |
+  \revert SustainPedal.Y-offset
   s2\sustainOn s4.\sustainOff\sustainOn s8\sustainOff |
   s4.\sustainOn s8\sustainOff s2 |
   
@@ -545,28 +545,33 @@ pedal = {
   s4.\sustainOn s8\sustainOff s2 |
   s4.\sustainOn s8\sustainOff s2 |
   s2.\sustainOn s8 s\sustainOff |
-  s4.\sustainOn s8\sustainOff s4 s8\sustainOn s\sustainOff |
-  s8.\sustainOn s16\sustainOff s4.\sustainOn s8\sustainOff s8.\sustainOn 
+  s4.\sustainOn s8\sustainOff s4 s4\sustainOn |
+  s8.\sustainOff\sustainOn s16\sustainOff s2\sustainOn s8.\sustainOff\sustainOn 
     s16\sustainOff |
-  s4.\sustainOn s8\sustainOff s\sustainOn s\sustainOff s8.\sustainOn 
-    s16\sustainOff |
+  s4.\sustainOn s8\sustainOff 
+    \override SustainPedal.Y-offset = -1.5
+    s\sustainOn s\sustainOff 
+    \revert SustainPedal.Y-offset
+    s8.\sustainOn s16\sustainOff |
   s2.\sustainOn s8 s\sustainOff |
   
   \barNumberCheck 25
-  s4.\sustainOn s8\sustainOff s4 s8\sustainOn s\sustainOff |
-  s2.\sustainOn s8 s\sustainOff |
+  s4.\sustainOn s8\sustainOff s4 s\sustainOn |
+  s2.\sustainOff\sustainOn s8 s\sustainOff |
   s2.\sustainOn s8 s\sustainOff |
   s1 * 5 |
   
   \barNumberCheck 33
   s1 * 2 |
+  \override SustainPedal.Y-offset = 3
   s2.\sustainOn s8 s\sustainOff |
   s1 * 3 |
+  \revert SustainPedal.Y-offset
   s2.\sustainOn s8 s\sustainOff |
-  s4.\sustainOn s8\sustainOff s4.\sustainOn s8\sustainOff |
+  s2\sustainOn s4.\sustainOff\sustainOn s8\sustainOff |
   
   \barNumberCheck 41
-  s4.\sustainOn s8\sustainOff s4.\sustainOn s8\sustainOff |
+  s2\sustainOn s4.\sustainOff\sustainOn s8\sustainOff |
   s4.\sustainOn s8\sustainOff s4.\sustainOn s8\sustainOff |
   s2.\sustainOn s8 s\sustainOff |
   s1 * 5 |
@@ -581,16 +586,20 @@ pedal = {
   \barNumberCheck 57
   s4.\sustainOn s8\sustainOff s4.\sustainOn s8\sustainOff |
   s4.\sustainOn s8\sustainOff s4.\sustainOn s8\sustainOff |
-  s2.\sustainOn s8 s\sustainOff |
+  s2..\sustainOn 
+    \override SustainPedal.Y-offset = 1
+    s8\sustainOff |
   s4.\sustainOn s8\sustainOff s4.\sustainOn s8\sustainOff |
   s2.\sustainOn s4\sustainOff |
   s1 * 2 |
-  s2\sustainOn s4.\sustainOff\sustainOn s8\sustainOff |
+  s2\sustainOn s4.\sustainOff\sustainOn 
+    \revert SustainPedal.Y-offset
+    s8\sustainOff |
   
   \barNumberCheck 65
   s4 s\sustainOn s2 |
-  s8 s\sustainOff s2\sustainOn s4\sustainOff\sustainOn |
-  s2.\sustainOff\sustainOn s8 s\sustainOff |
+  s4 s2\sustainOff\sustainOn s8.\sustainOff\sustainOn s16\sustainOff |
+  s2..\sustainOn s8\sustainOff |
   s4.\sustainOn s8\sustainOff s4.\sustainOn s8\sustainOff |
   s2.\sustainOn s4\sustainOff |
   s4.\sustainOn s8\sustainOff s4.\sustainOn s8\sustainOff |
@@ -598,12 +607,15 @@ pedal = {
   s4.\sustainOn s8\sustainOff s4 s\sustainOn |
   
   \barNumberCheck 73
-  s4. s8\sustainOff s4 s\sustainOn |
+  s4. 
+    \override SustainPedal.Y-offset = 3
+    s8\sustainOff s4 s\sustainOn |
   s4. s8\sustainOff s4 s\sustainOn |
   s4 s\sustainOff s2 |
   s2.\sustainOn s8 s\sustainOff |
-  s4.\sustainOn s8\sustainOff s4 s8.\sustainOn s16\sustainOff |
-  s4\sustainOn s2\sustainOff\sustainOn s4\sustainOff\sustainOn |
+  \revert SustainPedal.Y-offset
+  s4.\sustainOn s8\sustainOff s4 s\sustainOn |
+  s4\sustainOff\sustainOn s2\sustainOff\sustainOn s4\sustainOff\sustainOn |
   s2\sustainOff\sustainOn s4\sustainOff\sustainOn s8.\sustainOff\sustainOn
     s16\sustainOff |
   s2.\sustainOn s8 s\sustainOff |
@@ -611,10 +623,12 @@ pedal = {
   \barNumberCheck 81
   s4.\sustainOn s8\sustainOff s2 |
   s1 * 2 |
+  \override SustainPedal.Y-offset = 2
   s2\sustainOn s4.\sustainOff\sustainOn s8\sustainOff |
   s2.\sustainOn s4\sustainOff |
   s4 s\sustainOn s s8 s\sustainOff |
   s2.\sustainOn s8 s\sustainOff |
+  \revert SustainPedal.Y-offset
   s1\sustainOn |
   
   \barNumberCheck 89

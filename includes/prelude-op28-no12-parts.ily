@@ -452,16 +452,20 @@ pedal = {
   s2. * 2 |
   s4.\sustainOn s\sustainOff |
   s2. |
-  s2\sustainOn s8. s16\sustainOff |
+  s2\sustainOn s8. 
+    \override SustainPedal.Y-offset = 1.5
+    s16\sustainOff |
   s2\sustainOn s8. s16\sustainOff |
   s4.\sustainOn s\sustainOff |
   s4.\sustainOn s8\sustainOff s\sustainOn s\sustainOff |
   
   \barNumberCheck 41
-  \repeat unfold 4 { s4.\sustainOn s\sustainOff | }
+  s4.\sustainOn s\sustainOff |
+  \revert SustainPedal.Y-offset
+  \repeat unfold 3 { s4.\sustainOn s\sustainOff | }
   s2.\sustainOn |
-  s2.\sustainOff\sustainOn |
   s2\sustainOff\sustainOn s8. s16\sustainOff |
+  s2\sustainOn s8. s16\sustainOff |
   s2.\sustainOn |
   
   \barNumberCheck 49

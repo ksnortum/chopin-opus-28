@@ -166,7 +166,9 @@ pedal = {
   
   \barNumberCheck 9
   \repeat unfold 4 { s4 s8\sustainOn s\sustainOff s2 | }
+  \override SustainPedal.Y-offset = 2
   s4 s8\sustainOn s\sustainOff s4 \tuplet 3/2 { s4\sustainOn s8\sustainOff } |
+  \revert SustainPedal.Y-offset
   s4 s8\sustainOn s\sustainOff s4 s8.\sustainOn s16\sustainOff |
   s4 s8\sustainOn s\sustainOff s4 s8\sustainOn s\sustainOff |
   s8\sustainOn s\sustainOff s8\sustainOn s\sustainOff s8\sustainOn s\sustainOff
@@ -179,6 +181,16 @@ pedal = {
   s2..\sustainOff\sustainOn s8\sustainOff |
 }
 
+forceBreaks = {
+  s1\noBreak s1\noBreak s1\break\noPageBreak
+  s1\noBreak s1\noBreak s1\break\noPageBreak
+  s1\noBreak s1\break\noPageBreak
+  s1\noBreak s1\noBreak s1\break\noPageBreak
+  s1\noBreak s1\pageBreak
+  
+  s1\noBreak s1\noBreak s1\break\noPageBreak
+}
+
 preludeEighteenMusic = \score { 
   \keepWithTag #'layout
   \new PianoStaff \with { 
@@ -188,6 +200,7 @@ preludeEighteenMusic = \score {
     \new Dynamics \dynamics
     \new Staff = "lower" \leftHand
     \new Dynamics \pedal
+    \new Devnull \forceBreaks
   >>
   \layout {}
 }

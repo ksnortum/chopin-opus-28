@@ -199,7 +199,7 @@ leftHand = \relative {
     ef, bf'' bf,  ef, bf'' bf,  ef, bf'' bf, |
     ef,8 af' bf,  ef, bf'' bf,  ef, bf'' bf, |
     ef, bf'' bf,  ef, bf'' bf,  g bf' ef, |
-    \stemDown g,,8 b'' f  g, b' f  gs, b' e, |
+    g,,8 b'' f  \stemDown g, b' f  gs, b' e, |
     a,8 cs' e,  a, c' f,  a, ef'' fs, |
     bf,8 ef' fs,  bf, ef' g,  \stemUp bf,, af'' bf, |
     
@@ -379,13 +379,18 @@ pedal = {
   s2\sustainOn s8. s16\sustainOff |
   s4\sustainOn s4\sustainOff\sustainOn s8. s16\sustainOff |
   s2\sustainOn s8. s16\sustainOff |
+  %\override SustainPedal.Y-offset = 3
   s4\sustainOn s4\sustainOff\sustainOn s8. s16\sustainOff |
   s2\sustainOn s8. s16\sustainOff |
-  s2\sustainOn s8.\sustainOff\sustainOn s16\sustainOff |
+  %\revert SustainPedal.Y-offset
+  s2\sustainOn 
+    \override SustainPedal.Y-offset = 1
+    s8.\sustainOff\sustainOn s16\sustainOff |
   s4\sustainOn s\sustainOff\sustainOn s8.\sustainOff\sustainOn s16\sustainOff |
   s4\sustainOn s\sustainOff\sustainOn s8.\sustainOff\sustainOn s16\sustainOff |
   
   \barNumberCheck 65
+  %\revert SustainPedal.Y-offset
   s2\sustainOn s8. s16\sustainOff |
   s2\sustainOn s4\sustainOff\sustainOn |
   s4 s4\sustainOff\sustainOn s8. s16\sustainOff |
@@ -400,6 +405,12 @@ pedal = {
   }
 }
 
+forceBreaks = {
+  \partial 4 s4
+  s2. * 15 s2.\pageBreak
+  
+}
+
 preludeNinteenMusic = \score { 
   \keepWithTag #'layout
   \new PianoStaff \with { 
@@ -409,6 +420,7 @@ preludeNinteenMusic = \score {
     \new Dynamics \dynamics
     \new Staff = "lower" \leftHand
     \new Dynamics \pedal
+    \new Devnull \forceBreaks
   >>
   \layout {}
 }

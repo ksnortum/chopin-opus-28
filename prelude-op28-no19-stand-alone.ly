@@ -9,5 +9,18 @@
   composer = "Frédéric Chopin"
 }
 
-\preludeNinteenMusic
+% No force breaks
+\score { 
+  \keepWithTag #'layout
+  \new PianoStaff \with { 
+    instrumentName = \markup \huge "No. 19"
+  } <<
+    \new Staff = "upper" \rightHand
+    \new Dynamics \dynamics
+    \new Staff = "lower" \leftHand
+    \new Dynamics \pedal
+  >>
+  \layout {}
+}
+
 \preludeNinteenMidi

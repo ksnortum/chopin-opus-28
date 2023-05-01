@@ -499,7 +499,14 @@ pedal = {
   \barNumberCheck 17
   s4.\sustainOn s4\sustainOff\sustainOn s8\sustainOff |
   s2\sustainOn s8 s\sustainOff |
-  \repeat unfold 5 { s8.\sustainOn s\sustainOff s4. | }
+  \override SustainPedal.Y-offset = 1.5
+  \repeat unfold 3 { s8.\sustainOn s\sustainOff s4. | }
+  s8.\sustainOn 
+    \revert SustainPedal.Y-offset
+    s\sustainOff s4. |
+  \override SustainPedal.Y-offset = 1.5
+  s8.\sustainOn s\sustainOff s4. |
+  \revert SustainPedal.Y-offset
   s8.\sustainOn s\sustainOff s8.\sustainOn s\sustainOff |
   
   \barNumberCheck 25
@@ -512,30 +519,50 @@ pedal = {
   \repeat unfold 5 { s2\sustainOn s8 s\sustainOff | }
   s8.\sustainOn s\sustainOff s8.\sustainOn s\sustainOff |
   s2\sustainOn s8 s\sustainOff |
-  s8.\sustainOn s\sustainOff s8.\sustainOn s\sustainOff |
+  s8.\sustainOn 
+    \override SustainPedal.Y-offset = 2
+    s\sustainOff s8.\sustainOn s\sustainOff |
   
   \barNumberCheck 41
   s8.\sustainOn s\sustainOff s8.\sustainOn s\sustainOff |
   s2\sustainOn s8 s\sustainOff |
   s4.\sustainOn s\sustainOff |
   s4.\sustainOn s\sustainOff |
+  \revert SustainPedal.Y-offset
+  s4.\sustainOn s8 
+    \override SustainPedal.Y-offset = 1
+    s4\sustainOff |
   s4.\sustainOn s8 s4\sustainOff |
-  s4.\sustainOn s8 s4\sustainOff |
-  s4.\sustainOn s\sustainOff |
+  \revert SustainPedal.Y-offset
+  s4.\sustainOn 
+    \override SustainPedal.Y-offset = 1.5
+    s\sustainOff |
   s4.\sustainOn s\sustainOff |
   
   \barNumberCheck 49
+  \revert SustainPedal.Y-offset
+  s4.\sustainOn s8 
+    \override SustainPedal.Y-offset = 1
+    s4\sustainOff |
   s4.\sustainOn s8 s4\sustainOff |
-  s4.\sustainOn s8 s4\sustainOff |
+  \revert SustainPedal.Y-offset
+  s4\sustainOn 
+    \override SustainPedal.Y-offset = 1
+    s8\sustainOff s4\sustainOn s8\sustainOff |
   s4\sustainOn s8\sustainOff s4\sustainOn s8\sustainOff |
-  s4\sustainOn s8\sustainOff s4\sustainOn s8\sustainOff |
+  %\revert SustainPedal.Y-offset
   s4\sustainOn s8\sustainOff s4.\sustainOn |
   s8 s\sustainOff s s4. |
-  s4\sustainOn s8\sustainOff s4\sustainOn s8\sustainOff |
+  \revert SustainPedal.Y-offset
+  s4\sustainOn 
+    \override SustainPedal.Y-offset = 1.5
+    s8\sustainOff s4\sustainOn s8\sustainOff |
   s4.\sustainOn s4 s16 s\sustainOff |
   
   \barNumberCheck 57
-  \repeat unfold 4 { s4.\sustainOn s4 s16 s\sustainOff | }
+  s4.\sustainOn s4 s16 s\sustainOff |
+  \revert SustainPedal.Y-offset
+  \repeat unfold 3 { s4.\sustainOn s4 s16 s\sustainOff | }
   s2.\sustainOn |
   s2. * 2 |
   s4. s4 s8\sustainOff |
@@ -574,6 +601,21 @@ pedal = {
   s2. * 2 |
 }
 
+forceBreaks = {
+  \repeat unfold 5 { s2.\noBreak } s2.\break\noPageBreak
+  \repeat unfold 5 { s2.\noBreak } s2.\break\noPageBreak
+  \repeat unfold 5 { s2.\noBreak } s2.\break\noPageBreak
+  \repeat unfold 4 { s2.\noBreak } s2.\break\noPageBreak
+  \repeat unfold 3 { s2.\noBreak } s2.\break\noPageBreak
+  \repeat unfold 4 { s2.\noBreak } s2.\pageBreak
+  
+  \repeat unfold 5 { s2.\noBreak } s2.\break\noPageBreak
+  \repeat unfold 5 { s2.\noBreak } s2.\break\noPageBreak
+  \repeat unfold 3 { s2.\noBreak } s2.\break\noPageBreak
+  \repeat unfold 3 { s2.\noBreak } s2.\break\noPageBreak
+  \repeat unfold 4 { s2.\noBreak } s2.\pageBreak
+}
+
 preludeSeventeenMusic = \score { 
   \keepWithTag #'layout
   \new PianoStaff \with { 
@@ -583,6 +625,7 @@ preludeSeventeenMusic = \score {
     \new Dynamics \dynamics
     \new Staff = "lower" \leftHand
     \new Dynamics \pedal
+    \new Devnull \forceBreaks
   >>
   \layout {}
 }
