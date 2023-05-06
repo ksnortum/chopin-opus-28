@@ -9,5 +9,9 @@
   composer = "Frédéric Chopin"
 }
 
+\paper {
+  two-sided = ##f
+}
+
 \preludeTwentyThreeMusic
 \preludeTwentyThreeMidi

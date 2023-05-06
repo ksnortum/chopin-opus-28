@@ -9,6 +9,10 @@
   composer = "Frédéric Chopin"
 }
 
+\paper {
+  two-sided = ##f 
+}
+
 % No force breaks
 \score { 
   \keepWithTag #'layout

@@ -53,6 +53,10 @@
   bottom-margin = 6\mm % default 6
   left-margin = 10\mm % default 10
   right-margin = 10\mm % default 10
+  
+  two-sided = ##t
+  inner-margin = 14\mm
+  outer-margin = 6\mm
 }
 
 \layout {
@@ -67,7 +71,7 @@
   } 
   \context {
     \Voice
-    \override Tie.minimum-length = 2 % do I want this?
+    \override Tie.minimum-length = 2
   }
 }
 

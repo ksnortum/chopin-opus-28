@@ -12,6 +12,7 @@
 \paper {
   ragged-last-bottom = ##t
   min-systems-per-page = ##f
+  two-sided = ##f
 }
 
 \preludeFiveMusic

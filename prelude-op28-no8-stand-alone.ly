@@ -11,6 +11,7 @@
 
 \paper {
   min-systems-per-page = ##f
+  two-sided = ##f
 }
 
 % Full score here instead of variable because we don't want forced breaks

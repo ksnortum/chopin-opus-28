@@ -10,8 +10,10 @@
 }
 
 \paper {
+  top-margin = 3\mm % default 5
+  bottom-margin = 3\mm % default 6
   system-system-spacing.padding = 2
-  tagline = ##f
+  two-sided = ##f
 }
 
 \preludeNineMusic

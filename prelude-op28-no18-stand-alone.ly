@@ -13,6 +13,7 @@
   ragged-last-bottom = ##t
   min-systems-per-page = ##f
   system-system-spacing.padding = 2
+  two-sided = ##f
 }
 
 \preludeEighteenMusic

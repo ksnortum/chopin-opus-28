@@ -11,6 +11,7 @@
 
 \paper {
   min-systems-per-page = ##f
+  two-sided = ##f
 }
 
 \preludeFifteenMusic

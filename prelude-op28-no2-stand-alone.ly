@@ -10,5 +10,9 @@
   composer = "Frédéric Chopin"
 }
 
+\paper {
+  two-sided = ##f
+}
+
 \preludeTwoMusic
 \preludeTwoMidi
