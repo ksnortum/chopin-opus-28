@@ -23,7 +23,7 @@ Each separate prelude has its own LilyPond file in the format `prelude-op28-no[p
 
         lilypond prelude-op28-no1-stand-alone.ly
 
-You may also download the latest release [needs link] to get the compiled PDFs.
+You may also download the latest release [here](https://github.com/ksnortum/chopin-opus-28/releases/latest) to get the compiled PDFs and MIDI files.
 
 ### Two-sided printing
 `preludes-op28-book.ly` is set up so that you can print it on two sides of the paper and leave an extra margin amount on the inside pages for binding.  If you don't want this, change `includes\header-paper.ily` and set `two-sided = ##f`.  Similarly, the "stand-alone" peices have `two-sided` turned off.  It this is not the desired behavioir, comment out the `two-sided = ##f` line.
