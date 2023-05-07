@@ -96,7 +96,7 @@ rightHand = \relative {
    \barNumberCheck 57
    g8 ef, ef'  bf' g, ef'  cf' g, ef' |
    bf'8 af, d  bff' af, d  af' af, d |
-   g8 ef, ef'  bf' g, ef'  c' g, ef' |
+   g8 g, ef'  bf' g, ef'  c' g, ef' |
    bf'8 af, d  bff' af, d  af' af, d |
    g8 g, ef'  bf' bf, g'  ef' ef, bf' |
    g'8 d, b'  f' d, b'  e d, b' |
@@ -180,7 +180,7 @@ leftHand = \relative {
     ef,8 gf' c,  f, af' d,  g, bf' e, |
     af,8 af' f  c af' f  af, af' f |
     \stemUp \clef treble f,8 ef'' af,  ef ef' af,  af, ef'' af, |
-    \clef bass a,,8 \clef treble a'' f  c a' f  f, a' ef |
+    \clef bass af,,8 \clef treble af'' f  c af' f  f, af' ef |
     \stemDown \clef bass bf, ef' af,  f d' af  bf, bf' af |
     
     \barNumberCheck 49
