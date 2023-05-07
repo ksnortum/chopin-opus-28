@@ -269,7 +269,7 @@ leftHandLower = \relative {
   d,,16( gs f' d, gs'8) d,16( gs f' d, gs'8) |
   
   \barNumberCheck 73
-  <d, a' f'>4\arpeggio r8 \clef treble <f'' a c f>4.-> |
+  <d, a' f'>4\arpeggio r8 \clef treble <f'' a d f>4.-> |
   R2. |
   \override MultiMeasureRest.Y-offset = 0
   \staffUp R2. * 3 |
