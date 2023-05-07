@@ -31,7 +31,7 @@ rightHand = \relative {
     << { <ef' g>8. <d f>16 } \\ { <g, b>4 } >> <ef g c ef>4) |
   <ef af c ef>4-\slurPositionsB ( <f af df f>
     << { <c' ef>8. <bf df>16 } \\ { <df, ef g>4 } >> <c ef af c>4) |
-  <b d g b>4-\slurShapeA ( <e g bf c e>
+  <d f b d>4-\slurShapeA ( <e g bf c e>
     << { g'8. f16 } \\ { <af, c>4 } >> <g c e>4
   <fs c' d>4 <g b d g> \clef treble
     << { b'8. a16 } \\ { <c, d fs>4 } >> <b d g>4)
