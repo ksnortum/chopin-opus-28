@@ -122,7 +122,7 @@ leftHand = \relative {
   ef8 <a gf'>) r ef( df <f bf f'>) r4 |
     
   \barNumberCheck 17
-  f,8 r <c'ef a ef'>4 r2 |
+  f,8 r <c' f a ef'>4 r2 |
   <bf, bf'>8 <df' f df'> r <f,, f'>( <bf bf'>) <df' f df'> r <f,, f'>( |
   \repeat unfold 2 {
     <bf bf'>8) <df' f df'> r <f,, f'>( <bf bf'>) <df' f df'> r <f,, f'>( |
@@ -153,7 +153,7 @@ leftHand = \relative {
   f'8) <ef' a> r f,( bf) <f' df'> r df,( |
   ef8) <a gf'> r ef( df) <bf' f'> r df,( |
   ef8) <a gf'> r ef( df) <bf' f'> r df,( |
-  <ef c' gf'>4) r <ef' gf cf gf'> <df gf bf ff'> |
+  <ef cf' gf'>4) r <ef' gf cf gf'> <df gf bf ff'> |
   
   \barNumberCheck 41
   << { ef'2*1/2 } \\ { <cf, gf'>4 } >> r4 r2 |
