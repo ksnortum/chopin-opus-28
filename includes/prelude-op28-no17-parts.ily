@@ -240,7 +240,7 @@ rightHandLower = \relative {
   s2. |
   <df gf>8 q q <c gf'> q q |
   s2. |
-  <ef bf'>8 q q <df af'> q q |
+  <ef bf'>8 q q <f df'> q q |
   s2. |
   <ef af>8 q q <df af'> q q |
   s2. |
