@@ -24,7 +24,7 @@ unisonMusic = {
   gf,8 df' bf ef gf, e' a, e' c gf' df f |
   bf,8 f' df gf bf, gf' a, gf' c, f a, f' |
   bf,8 f' df gf bff, gf' af, gf' d f cf f |
-  af,8 ff' cf d af d g, d' bf f' gf, ef' |
+  af,8 ff' cf d af d g, d' bf f' g, ef' |
   f,8 df' g, b f b e, b' g df' e, c' |
   
   \barNumberCheck 9
