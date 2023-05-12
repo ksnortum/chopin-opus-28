@@ -39,6 +39,9 @@ If you compile the book of preludes, you will probably see some warnings.  This 
 
 You may also see programming errors that are likely caused by [this bug](https://gitlab.com/lilypond/lilypond/-/issues/6171) and can be ignored.
 
+## Thanks
+Thanks to [phmcarty](https://github.com/phmccarty) for the proofreading.
+
 ## License
 This work is licensed under the [Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/) from Creative Commons.  Follow the link for details.  Basically, you can use this work however you want *if* you keep the same license and you attribute the work to me, Knute Snortum (knute (at) snortum (dot) net). 
 
